@@ -1,0 +1,174 @@
+/* Funentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+  --color-blanco: #FFFFFF;
+  --color-gris-suave: #F2F2F2;
+  --color-gris-oscuro: #333333;
+  --color-negro: #000000;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* Estilos base */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-blanco);
+  color: var(--color-gris-oscuro);
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Menu */
+.headerContainer {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-negro);
+  color: var(--color-gris-suave);
+}
+.header {
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+}
+.logo > i {
+  padding-right: 1rem;
+}
+.menuContainer {
+  width: 30rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.menuContainer > li {
+  list-style: none;
+}
+.menuContainer > li > a {
+  font-size: 1.4rem;
+  color: var(--color-gris-suave);
+  text-decoration: none;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: mainArea;
+  background-color: var(--color-blanco);
+}
+/* Seccion: Mi Trabajo */
+.galeryContainer {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.imgContainer {
+  width: 30rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.imgContainer > img {
+  width: 30rem;
+}
+
+/* Seccion: Sobre Mi */
+.aboutMeContainer {
+  background-color: var(--color-gris-suave);
+}
+.aboutMe {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutMe > img {
+  width: 15rem;
+  border-radius: 50%;
+}
+.descriptionContainer > h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.descriptionContainer > p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Seccion: Contacto */
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  width: 80%;
+  width: 30rem;
+}
+.contact-form > h2 {
+  text-align: center;
+}
+
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form > form > label {
+  margin-bottom: 0.6rem;
+}
+
+.contact-form > form > input,
+textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+}
+
+.contact-form > form > button {
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-gris-suave);
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+.socialMediaContainer > a {
+  margin-right: 1rem;
+  color: var(--color-blanco);
+  font-size: 2.5rem;
+}
