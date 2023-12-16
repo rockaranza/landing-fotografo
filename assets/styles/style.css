@@ -27,8 +27,20 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'menuArea'
+  'mainArea'
+  'footer'
+  ;
+}
+
 /* Menu */
 .headerContainer {
+  grid-area: menuArea;
   height: 10rem;
   display: flex;
   align-items: center;
@@ -69,11 +81,11 @@ h1, h2, h3 {
 
 /* Main */
 .main {
+  grid-area: mainArea;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-area: mainArea;
   background-color: var(--color-blanco);
 }
 /* Seccion: Mi Trabajo */
@@ -81,6 +93,9 @@ h1, h2, h3 {
   padding: 4rem 2rem;
   display: grid;
   grid-template-columns: 1fr;
+}
+.galeryContainer > h2 {
+  font-size: 1.6rem;
 }
 .imgContainer {
   width: 30rem;
@@ -120,26 +135,25 @@ h1, h2, h3 {
 }
 
 /* Seccion: Contacto */
-.contact-form {
+.contactForm {
   background-color: #fff;
   padding: 2rem;
-  width: 80%;
   width: 30rem;
 }
-.contact-form > h2 {
-  text-align: center;
+.contactForm > h2 {
+  font-size: 1.6rem;
 }
 
-.contact-form > form {
+.contactForm > form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-form > form > label {
+.contactForm > form > label {
   margin-bottom: 0.6rem;
 }
 
-.contact-form > form > input,
+.contactForm > form > input,
 textarea {
   padding: 0.8rem;
   margin-bottom: 1rem;
@@ -147,7 +161,7 @@ textarea {
   border-radius: 0.4rem;
 }
 
-.contact-form > form > button {
+.contactForm > form > button {
   background-color: var(--color-gris-oscuro);
   color: var(--color-gris-suave);
   padding: 1rem;
@@ -159,6 +173,7 @@ textarea {
 
 /* Footer */
 .footer {
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   justify-content: center;
